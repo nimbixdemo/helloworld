@@ -4,7 +4,7 @@ ADD /helloWorld /usr/bin/
 RUN apt-get update -y && apt-get install git -y
 RUN git clone https://github.com/NVIDIA/cuda-samples.git
 RUN make -C cuda-samples/Samples/1_Utilities/deviceQuery
-RUN ln -s /usr/local/cuda/samples/1_Utilities/deviceQuery/deviceQuery /usr/bin
+RUN mv cuda-samples/Samples/1_Utilities/deviceQuery/deviceQuery /usr/bin/deviceQuery
 
 
 
